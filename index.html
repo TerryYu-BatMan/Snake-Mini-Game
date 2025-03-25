@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇</title>
+    <style>
+        #app {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+        #cas {
+            background: rgb(11, 177, 80);
+        }
+        #start{
+            color: #302c2c;
+            font-size: 22px;
+            position: absolute;
+            left: 35%;
+            top: 45%;
+            display:block;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        #end {
+            color: #302c2c;
+            font-size: 22px;
+            position: absolute;
+            left: 35%;
+            top: 45%;
+            display:none;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+		#pause{
+			color: #302c2c;
+			font-size: 22px;
+			position: absolute;
+			left: 35%;
+			top: 45%;
+			display:none;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+        .scoreList{
+            color: #302c2c;
+            position: absolute;
+            top:10px;
+            left: 15px;
+        }
+        .scoreMaxList{
+            color: #302c2c;
+            position: absolute;
+            top:10px;
+            right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <canvas id="cas" width="400" height="400"></canvas>
+        <div id="start">Game Start!</div> 
+		<div id="pause">Game Puase!</div>
+        <div id="end">Game Over!</div>
+        <div class="scoreList">Score: <span class="score"></span></div>
+        <div class="scoreMaxList">Max-Score: <span class="max-score"></span></div>
+        <audio src="./bgm/snkmusic.wav" id="bgm" loop></audio>
+    </div>
+    <script src="./jquery.js"></script>
+    <script src="./snake.js"></script>
+</body>
+
+</html>
